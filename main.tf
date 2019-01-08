@@ -17,8 +17,9 @@ resource "datadog_timeboard" "request_type_ignored" {
   "graph" {
 
     "request" {
-      q    = "avg:system.cpu.user{*}"
-      type = "line"
+      q         = "avg:system.cpu.user{*}"
+      type      = "line"
+      extra_col = true
     }
 
     title = "Query value graph"
